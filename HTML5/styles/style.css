@@ -1,6 +1,9 @@
+
+
 @import url(./normalize.css);
 @import url(./reset.css);
-@import url();
+
+/* 본문 스타일 영역 */
 
 body{
   background-color: burlywood;
@@ -9,20 +12,47 @@ body{
   font-weight: 500;
 }
 
+/* 레이아웃 */
+.header, .visual, .main, .slogan, .footer-inner{
+  width: 940px;
+  box-sizing: border-box; /**/
+  margin: 0 auto;
 
+}
 
+/* 헤더 영역 */
 .header{
   background-color: pink;
+  padding:0 30px;
+  height: 15vh;
 }
+
+
+/* 비주얼 영역 */
 .visual{
   background-color: orange;
+  height: 10vh;
 }
+
+/* 메인영역 */
 .main{
   background-color: lightgreen;
+  height: 50vh;
 }
+
+
+/* 슬로건 영역 */
 .slogan{
   background-color: skyblue;
+  height: 10vh;
 }
+
+/* Footer 영역 */
 .footer{
   background-color: gray;
+}
+
+.footer-inner{
+  height: 15vh;
+  background-color:silver;
 }
