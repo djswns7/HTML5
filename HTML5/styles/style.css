@@ -3,8 +3,16 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
-/* 본문 스타일 영역 */
+/* 기본스타일 */
+*, *::before,*::after{
+  box-sizing: border-box;
 
+}
+
+
+
+
+/* 본문 스타일 영역 */
 body{
   background-color: burlywood;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -38,6 +46,38 @@ body{
 .main{
   background-color: lightgreen;
   height: 50vh;
+  /* border: 1px solid red; */
+  /* display: flow-root; */
+}
+
+/* .main::after{
+  content:"";
+  clear: both;
+  display: block;
+} */
+
+.gr{
+  margin: 0 15px;
+
+}
+.group1{
+  background-color: violet;
+  width: 250px;
+  float: left;
+  margin-left: 30px;
+}
+
+.group2{
+  background-color: salmon;
+  width: 380px;
+  float: left;
+}
+
+.group3{
+  background-color: lightblue;
+  width: 190px;
+  float: left;
+  margin-right: 30px;
 }
 
 
@@ -45,6 +85,7 @@ body{
 .slogan{
   background-color: skyblue;
   height: 10vh;
+  /* clear: both; */
 }
 
 /* Footer 영역 */
