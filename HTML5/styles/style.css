@@ -42,7 +42,7 @@ body{
 /* 메인영역 */
 .main{
   background-color: lightgreen;
-  height: 50vh;
+  min-height: 450px;
   display: flex;
   /* flex-direction: row-reverse; */
   flex-direction: row;
@@ -50,6 +50,13 @@ body{
 
   /* 교차축 정렬 default값은 stretch */
   /* align-items: flex-start; */
+  flex-wrap: nowrap;
+
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
+  padding: 30px 30px;
+
+  align-items: flex-start;
 }
 
 /* .main::after{
@@ -63,7 +70,7 @@ body{
   width: 250px;
 
   /* order속성의 default는 0 이므로 다른 item들이 order속성이 적용되지 않았다면,  1이상만 되어서 맨 뒤로감*/
-  order: 1;
+  /* order: 1; */
 }
 
 .group2{
@@ -74,7 +81,7 @@ body{
 .group3{
   background-color: yellow;
   width: 190px;
-  order: -1;
+  /* flex-grow: 1; */
 }
 
 
