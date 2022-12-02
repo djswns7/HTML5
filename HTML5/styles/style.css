@@ -6,9 +6,7 @@
 /* 기본스타일 */
 *, *::before,*::after{
   box-sizing: border-box;
-
 }
-
 
 
 
@@ -23,9 +21,8 @@ body{
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
   width: 940px;
-  box-sizing: border-box; /**/
+  box-sizing: border-box; 
   margin: 0 auto;
-
 }
 
 /* 헤더 영역 */
@@ -46,8 +43,7 @@ body{
 .main{
   background-color: lightgreen;
   height: 50vh;
-  /* border: 1px solid red; */
-  /* display: flow-root; */
+  
 }
 
 /* .main::after{
@@ -56,28 +52,19 @@ body{
   display: block;
 } */
 
-.gr{
-  margin: 0 15px;
-
-}
 .group1{
   background-color: violet;
   width: 250px;
-  float: left;
-  margin-left: 30px;
 }
 
 .group2{
   background-color: salmon;
   width: 380px;
-  float: left;
 }
 
 .group3{
   background-color: lightblue;
   width: 190px;
-  float: left;
-  margin-right: 30px;
 }
 
 
