@@ -14,7 +14,7 @@
 
 /* 본문 스타일 영역 */
 body{
-  background-color: burlywood;
+  background-color: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
   font-weight: 500;
@@ -23,16 +23,31 @@ body{
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
   width: 940px;
-  box-sizing: border-box; /**/
   margin: 0 auto;
 
 }
 
 /* 헤더 영역 */
 .header{
-  background-color: pink;
+  background-color: #fff;
   padding:0 30px;
   height: 15vh;
+  border-radius: 0 0 15px 15px / 0 0 50px 50px;
+  position: relative;
+}
+
+/* 로고 */
+.logo{
+  background-color: blue;
+  position: absolute;
+  left: 45px;
+  top: 60px;
+}
+
+/* 텍스트 링크 모음 */
+.member{
+  background-color:  aqua;
+  
 }
 
 
