@@ -42,16 +42,25 @@ body{
 
 /* :before / ::berfore  ==> first child */
 /* :after / ::after  ==> last child */
-.member li::before{
+/* .member li::before{
   content: ":";
 
-}
+} */
 
-.member .first::before{
-  /* content: "첫번째 자식요소를 생성합니다." !important; */
+/* .member .first::before{
+  /* content: "첫번째 자식요소를 생성합니다." !important; 
   content: "첫번째 자식요소를 생성합니다.";
 
+} */
+/* .member li:nth-child(2)::before{
+  content: "";
+
+} */
+
+.member li:nth-child(n+3){
+  background-color:aqua;
 }
+
 
 /* 비주얼 영역 */
 .visual{
