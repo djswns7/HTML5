@@ -2,6 +2,7 @@
 
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
 
 /* 기본스타일 */
 *, *::before,*::after{
@@ -57,10 +58,22 @@ body{
 
 } */
 
-.member li:nth-child(n+3){
+/* .member li:nth-child(n+2)::before{
+  content : ":";
   background-color:aqua;
-}
+} */
 
+.member li::before{
+  content: "\e800";
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right:0 .2em;
+  text-align: center;
+}
 
 /* 비주얼 영역 */
 .visual{
