@@ -27,11 +27,31 @@ body{
 
 /* 헤더 영역 */
 .header{
-  background-color: pink;
+  background-color: #fff;
   padding:0 30px;
   height: 15vh;
+  border-radius: 0 0 15px 15px;
 }
 
+.member{
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+/* :before / ::berfore  ==> first child */
+/* :after / ::after  ==> last child */
+.member li::before{
+  content: ":";
+
+}
+
+.member .first::before{
+  /* content: "첫번째 자식요소를 생성합니다." !important; */
+  content: "첫번째 자식요소를 생성합니다.";
+
+}
 
 /* 비주얼 영역 */
 .visual{
@@ -64,6 +84,10 @@ body{
   clear: both;
   display: block;
 } */
+
+.group {
+  height: 100px;
+}
 
 .group1{
   background-color: violet;
