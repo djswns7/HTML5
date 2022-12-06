@@ -11,7 +11,6 @@
   height: 1px;
   margin: -1px;
   overflow: hidden;
-  clip-path: rect(0 0 0 0);
   clip-path: polygon(0 0, 0 0,0 0);
 }
 
@@ -38,7 +37,8 @@ a{
 body{
   font-size: 1.4rem;
   color: #181818;
-  background-color: #ccc;
+  /* background-color: #ccc; */
+  background: #ccc linear-gradient(to bottom,#ccc 0%,#eee 35%, #efefef 60%,  #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
   font-weight: 500;
@@ -96,6 +96,23 @@ body{
 /* .memeber li:last-child a{
   padding: 0;
 } */
+
+/* 메인메뉴 */
+.navigation{
+  padding-bottom: 80px;
+}
+.menu{
+  background-color: orangered;
+  /* background-image: linear-gradient(red, green,orange);*/
+  background: #e85e2c
+  linear-gradient(
+    to bottom,
+    #ef9126 0%,
+    #e85e2c 35%,
+    #e85e2c 70%,
+    #ef9126 100%
+  );
+}
 
 
 .divider{
@@ -163,5 +180,5 @@ body{
 
 .footer-inner{
   height: 15vh;
-  background-color:silver;
+  background: #ccc linear-gradient(to bottom,#ccc 10%,#eee 35%, #efefef 60%, #fff 100%);
 }
