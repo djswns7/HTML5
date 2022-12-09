@@ -3,7 +3,8 @@
 @import url(./reset.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden,
+legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -225,17 +226,12 @@ body {
   }
 }
 
-@keyframes fadeEffect{
-  0%{
+@keyframes fadeEffect {
+  0% {
     opacity: 1;
   }
-
-  50%{
+  100% {
     opacity: 0;
-  }
-
-  100%{
-    opacity: 1;
   }
 }
 
@@ -244,52 +240,40 @@ body {
   position: relative;
 }
 
-.visual-text {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  animation-name: moveEffect;
-  animation-duration: 1000ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  /* display: inline-block; */
-  position: absolute;
-}
-
-.visual::before, .visual::after{
+.visual::before,
+.visual::after {
   content: "";
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  animation: fadeEffect 2000ms ease infinite;
-  animation-direction: alternate;
+  animation: fadeEffect 2000ms infinite alternate;
 }
 
-.visual::before{
-  /* 1,2 */
-  /* background-image: url(./images/ani_flower_01.png)
-  , url(./images/ani_flower_02.png);
-  background-repeat: no-repeat;
-  background-position: 0 -10px, 580px 8px; */
-
-  /* 단축 표기법 */
-  background:  url(./images/ani_flower_01.png) no-repeat 0 -10px,
-  url(./images/ani_flower_02.png) no-repeat 580px 8px;
+.visual::before {
+  background: url("./images/ani_flower_01.png") no-repeat 0 -10px,
+    url("./images/ani_flower_02.png") no-repeat 600px 0;
 }
 
-
-.visual::after{
-  background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
-  background-repeat: no-repeat;
-  background-position: 300px 0, 800px 0px;
+.visual::after {
+  background: url("./images/ani_flower_03.png") no-repeat 300px 0,
+    url("./images/ani_flower_04.png") no-repeat 800px 0;
   animation-delay: 1000ms;
+}
+
+.visual-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  animation: moveEffect 400ms ease-in-out forwards;
+  position: relative;
+  z-index: 1;
 }
 
 /* 메인 */
 .main {
-  background: #fff;
-  height: 450px;
   display: flow-root;
+  background: #fff;
+  min-height: 450px;
   padding: 30px 15px;
   border-radius: 15px 15px 0 0;
 }
@@ -314,24 +298,107 @@ body {
 }
 
 /* 로그인 */
-.login{
-  background: coral radial-gradient(circle at right top, orange, orangered);
-  border-radius: 8px;
-  box-shadow: 8px 8px 0 1px #ccc ;
+.login {
+  box-shadow: 5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
   padding: 10px;
+  border-radius: 5px;
 }
 
-h2.login-title{
+.login-title {
   color: #ff0;
-  padding: 4px 0 4px 6px;
-
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
 }
 
-legend{
-
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
 }
 
+.login-form fieldset {
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+}
 
+.user-email,
+.user-pw {
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background-color: orangered;
+  color: #fff;
+  border: 0;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.sign a{
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before{
+  content: "\e803";
+  font-family: fontello;
+  margin-right: 6px;
+}
+
+/* .sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 0 10px 10px 10px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.sign li{
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.sign a{
+  display: inline-block;
+}
+
+.sign li:nth-child(2){
+  margin-left: 10px;
+} */
 
 /* 슬로건 */
 .slogan {
